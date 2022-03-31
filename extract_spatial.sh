@@ -38,6 +38,6 @@ ogr2ogr \
 -f PostgreSQL \
 Pg:"dbname=library" \
 GeoJSON:"https://opendata.arcgis.com/datasets/5f29b5fb39c74f5c99717da73c6c62cc_0.geojson" \
--nln "raw.district" \
+-nln "raw.library" \
 -t_srs "EPSG:2876" \
 -overwrite
