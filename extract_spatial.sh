@@ -21,6 +21,16 @@ GeoJSON:"https://opendata.arcgis.com/datasets/9597d3916aba47e887ca563d5ac15938_0
 -t_srs "EPSG:2876" \
 -overwrite
 
+# precincts
+echo "Extracting voting precincts..."
+ogr2ogr \
+-f PostgreSQL \
+Pg:"dbname=library" \
+GeoJSON:"https://opendata.arcgis.com/datasets/c8e2897d283b47f780920af0827d5126_0.geojson" \
+-nln "raw.precincts" \
+-t_srs "EPSG:2876" \
+-overwrite
+
 # fire perimeters
 echo "Extracting fire perimeters..."
 ogr2ogr \
