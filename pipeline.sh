@@ -15,3 +15,5 @@ psql -d library -f ./setup/extract_csv.sql
 # Process data
 # format raw into processing schema
 psql -U postgres -d library -f ./processing/format_raw_data.sql
+# process tax data
+psql -u postgres -d library -f ./processing/tax_joins.sql
