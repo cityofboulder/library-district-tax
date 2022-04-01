@@ -19,3 +19,7 @@ psql -U postgres -d library -f ./processing/format_raw_data.sql
 psql -u postgres -d library -f ./processing/tax_joins.sql
 # process spatial data
 psql -u postgres -d library -f ./processing/spatial_joins.sql
+
+# Analyze data
+# create revenues table
+psql -u postgres -d library -f ./analysis/anticipated_revenue.sql
