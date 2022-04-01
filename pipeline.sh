@@ -23,3 +23,5 @@ psql -u postgres -d library -f ./processing/spatial_joins.sql
 # Analyze data
 # create revenues table
 psql -u postgres -d library -f ./analysis/anticipated_revenue.sql
+# extract as a shp
+pgsql2shp -u postgres library clean.revenue
