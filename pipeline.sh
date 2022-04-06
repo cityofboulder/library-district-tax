@@ -16,12 +16,12 @@ psql -d library -f ./setup/extract_csv.sql
 # format raw into processing schema
 psql -U postgres -d library -f ./processing/format_raw_data.sql
 # process tax data
-psql -u postgres -d library -f ./processing/tax_joins.sql
+psql -U postgres -d library -f ./processing/tax_joins.sql
 # process spatial data
-psql -u postgres -d library -f ./processing/spatial_joins.sql
+psql -U postgres -d library -f ./processing/spatial_joins.sql
 
 # Analyze data
 # create revenues table
-psql -u postgres -d library -f ./analysis/anticipated_revenue.sql
+psql -U postgres -d library -f ./analysis/anticipated_revenue.sql
 # extract as a shp
 pgsql2shp -u postgres library clean.revenue
